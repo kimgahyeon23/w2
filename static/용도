@@ -1,0 +1,16 @@
+ STATICS
+○ 정적 파일을 배치하는 디렉토리
+ image, css, js 등의 파일들
+○ settings.py의 STATIC_URL 속성값을 추가해 줌
+ STATIC_URL= '/static'
+○ 템플릿 파일에서 STATIC 사용하기
+ {%load static %}을 반드시 먼저 지정하고 사용
+○ 변환 예
+{%load static %}
+{% static 'img/logo.png'%}
+→ /static/img/logo.png
+
+
+static가 setting.py에서 정의한 값으로 들어감
+url('{%static "images/penguins.jpg"%}')
+이미지 파일 가져올떄 이렇게 써야함
